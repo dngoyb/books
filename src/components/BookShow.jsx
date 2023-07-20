@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BookShow = () => {
 	return <div>BookShow</div>;
 };
