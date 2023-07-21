@@ -13,10 +13,13 @@ function App() {
 		setBooks(updatedBooks);
 	};
 
-	const deleteBookById = (id) => {};
+	const deleteBookById = (id) => {
+		const updatedBooks = books.filter((book) => book.id !== id);
+		setBooks(updatedBooks);
+	};
 	return (
 		<div className='app'>
-			<BookList books={books} />
+			<BookList books={books} onDelete={deleteBookById} />
 			<BookCreate onCreateBook={createBook} />
 		</div>
 	);
